@@ -1,0 +1,7 @@
+C:\Users\ASUS\Desktop\webRoot\webCore\bin\Release\webCore.dll.config
+C:\Users\ASUS\Desktop\webRoot\webCore\bin\Release\webCore.dll
+C:\Users\ASUS\Desktop\webRoot\webCore\bin\Release\webCore.pdb
+C:\Users\ASUS\Desktop\webRoot\webCore\obj\Release\webCore.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\webRoot\webCore\obj\Release\webCore.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\webRoot\webCore\obj\Release\webCore.dll
+C:\Users\ASUS\Desktop\webRoot\webCore\obj\Release\webCore.pdb

@@ -1,0 +1,10 @@
+C:\Users\ASUS\Desktop\webRoot\WindowsApp\bin\Debug\WindowsApp.exe.config
+C:\Users\ASUS\Desktop\webRoot\WindowsApp\bin\Debug\WindowsApp.exe
+C:\Users\ASUS\Desktop\webRoot\WindowsApp\bin\Debug\WindowsApp.pdb
+C:\Users\ASUS\Desktop\webRoot\WindowsApp\obj\Debug\WindowsApp.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\webRoot\WindowsApp\obj\Debug\WindowsApp.Form1.resources
+C:\Users\ASUS\Desktop\webRoot\WindowsApp\obj\Debug\WindowsApp.Properties.Resources.resources
+C:\Users\ASUS\Desktop\webRoot\WindowsApp\obj\Debug\WindowsApp.csproj.GenerateResource.Cache
+C:\Users\ASUS\Desktop\webRoot\WindowsApp\obj\Debug\WindowsApp.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\webRoot\WindowsApp\obj\Debug\WindowsApp.exe
+C:\Users\ASUS\Desktop\webRoot\WindowsApp\obj\Debug\WindowsApp.pdb

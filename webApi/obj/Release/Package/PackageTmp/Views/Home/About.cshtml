@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+<form  action="@Url.Action("About","Home")" method="post" enctype="multipart/form-data">
+    <input name="file" type="file" value="选择文件" />
+    <input type="submit"  value="提交"/>
+</form>

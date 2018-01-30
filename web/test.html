@@ -1,0 +1,99 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        .redfont {
+            color: #ff5d47;
+        }
+
+        .bluefont {
+            color: blue;
+        }
+    </style>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+</head>
+<body>
+<div ng-app="myApp">
+    <ul>
+        <li>
+            <a href="#red">红色方块视图</a>
+        </li>
+        <li>
+            <a href="#blue?a=123">蓝色方块视图</a>
+        </li>
+        <li>
+            <a href="#yellow?a=123">黄色方块视图</a>
+        </li>
+    </ul>
+    <p>内容切换：</p>
+    <div ng-view></div>
+    <script type="text/ng-template" id="red.html">
+        <p>{{message}}</p>
+        <div style="width: 100px; height: 100px; background-color: red;"></div>
+    </script>
+    <script type="text/ng-template" id="blue.html">
+        <p>{{message}}</p>
+        <div style="width: 100px; height: 100px; background-color: blue;"></div>
+    </script>
+    <script type="text/ng-template" id="yellow.html">
+        <p>{{message}}</p>
+        <div style="width: 100px; height: 100px; background-color: yellow;"></div>
+    </script>
+</div>
+<script>
+    var myApp = angular.module("myApp", ['ngRoute']);
+    myApp.config(["$locationProvider", "$routeProvider", function($locationProvider, $routeProvider) {
+        //  <a href="#!/red">红色方块</a>
+        $locationProvider.hashPrefix(''); // 1.6.x版本使用路由功能需加上这句
+        $routeProvider.when('/red', {
+            templateUrl: 'red.html',
+            controller: 'redController'
+        }).when('/blue', {
+            templateUrl: 'blue.html',
+            controller: 'blueController',
+            //依赖的条件
+            resolve: {
+                //延时1秒切换视图
+                delay: function($q, $timeout) {
+                    var delay = $q.defer();
+                    $timeout(delay.resolve, 1000);
+                    return delay.promise;
+                }
+            }
+        }).when('/yellow', {
+            templateUrl: 'yellow.html',
+            controller: 'yellowController',
+            //依赖的条件
+            resolve: {
+                //延时1秒切换视图
+                delay: function($q, $timeout) {
+                    var delay = $q.defer();
+                    $timeout(delay.resolve, 1000);
+                    return delay.promise;
+                }
+            }
+        }).otherwise({
+            //重定向地址
+            redirectTo: '/red' // 默认显示红色方块视图
+        });
+    }]);
+    //红色方块视图操作区
+    myApp.controller("redController", function($scope) {
+        $scope.message = "当前显示的是红色方块视图"; // red作用域
+    });
+    //蓝色方块视图操作区
+    myApp.controller("blueController", function($scope, $routeParams) {
+        $scope.message = "当前显示的是蓝色方块视图"; // blue作用域
+        console.log($routeParams); //传递参数
+    });
+    //黄色方块视图操作区
+    myApp.controller("yellowController", function($scope, $routeParams) {
+        $scope.message = "当前显示的是黄色方块视图"; // blue作用域
+        console.log($routeParams); //传递参数
+    });
+</script>
+</body>
+
+</html>

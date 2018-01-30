@@ -1,0 +1,47 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+    font-size: 1.5rem;
+    line-height: 180%;
+    font-family: PingFang SC,Lantinghei SC,Microsoft Yahei;
+    text-align:center;
+}
+
+.header {
+    height: 50px;
+    background: #f8f8ff;
+}
+
+.body {
+    position: relative;
+    width: 78%;
+    margin-top: 1%;
+}
+
+.list {
+    position: relative;
+    margin: 0 auto;
+    list-style: none;
+}
+
+    .list li {
+        position: relative;
+        margin-left: 16%;
+    }
+
+.time {
+    position: relative;
+    margin-left: 1%;
+}
+
+#searchboxExample {
+    margin: 0 auto;
+}
+
+.page {
+    margin: 0 auto;
+}
+  
+  
+  

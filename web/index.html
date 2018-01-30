@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script>
+        window.paceOptions = {
+            ajax: {
+                trackMethods: ['GET', 'POST']
+            }
+        }
+    </script>
+    <script src="Scripts/pace.js"></script>
+    <link href="Content/pace.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/zui.js"></script>
+    <link href="Content/zui.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <script src="http://www.lmjhome.com/skin/html/js/scrollReveal.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 header">
+                <div class="col-lg-8 col-lg-offset-1 col-xs-12" style="left:80px">
+                    <ul class="nav nav-pills menu">
+                        <li class=""><a href="#">技术文章</a></li>
+                        <li>
+                            <a href="#">生活杂记 <span class="label label-badge label-success">4</span></a>
+                        </li>
+                        <li class="visible-md"><a href="#">个人简历</a></li>
+                        <li class=""><a href="#">关于我</a></li>
+                        <li class=""><a href="#"></a></li>
+                        <li class="visible-lg-block" style="margin-top:6px;">
+                            <div class="input-control search-box search-box-circle has-icon-left has-icon-right" id="searchboxExample">
+                                <input id="inputSearchExample1" type="search" class="form-control search-input" placeholder="搜索">
+                                <label for="inputSearchExample1" class="input-control-icon-left search-icon"><i class="icon icon-search"></i></label>
+                                <a href="#" class="input-control-icon-right search-clear-btn"><i class="icon icon-remove"></i></a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--bloglist-->
+        <div class="row">
+            <div class="col-lg-offset-2 col-lg-8" style="height:110px;margin-top:50px;border-bottom:1px dashed black;position:relative">
+                <h2 class="h2"><a href="" style="color:#000;font-size:24px;font-weight:300">博客重构总结：React 服务端渲染结合单页面应用</a></h2>
+                <span style="position:absolute;left:120px;display:block"><i class="icon icon-calendar"></i>去年 8 月 23 日</span>
+                <span style="position:absolute;left:260px;display:block"><i class="iconfont icon-comment"></i>6</span>
+            </div>
+
+            <div class="col-lg-offset-2 col-lg-8" style="height:110px;margin-top:50px;border-bottom:1px dashed black">
+                <h2 class="h2"><a href="" style="color:#000;font-size:24px;font-weight:300">博客重构总结：React 服务端渲染结合单页面应用</a></h2>
+                <span style="position:absolute;left:120px;"><i class="icon icon-calendar"></i>去年 8 月 23 日</span>
+                <span style="position:absolute;left:260px"><i class="iconfont icon-comment"></i>6</span>
+            </div>
+
+
+            <!--<div data-scroll-reveal="enter left and move 50px over 1.33s">杨青个人博客</div>
+
+            <div data-scroll-reveal="enter from the bottom after 1s">ScrollReveal</div>
+
+            <div data-scroll-reveal="wait 2.5s and then ease-in-out 100px">ScrollReveal</div>-->
+
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    // 初始化搜索框，并在选项中指定搜索文本变更事件回调函数，这样当搜索框文本发送变化时获得通知。
+    $('#searchboxExample').searchBox({
+        escToClear: true, // 设置点击 ESC 键清空搜索框
+        onSearchChange: function (searchKey, isEmpty) {
+            console.log('搜索框文本变更：', searchKey);
+        }
+    });
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+
+        (function () {
+
+            window.scrollReveal = new scrollReveal({ reset: true });
+
+        })();
+
+    };
+    // 或者在初始化时指定
+    $('[data-toggle="tooltip"]').tooltip({
+        placement: 'bottom'
+    });
+</script>
